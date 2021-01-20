@@ -3,7 +3,7 @@
     "browser": true,
     "es6": true
   },
-  "extends": ["plugin:react/recommended", "plugin:jest/recommended", "airbnb"],
+  "extends": ["plugin:react/recommended", "plugin:jest/recommended"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -17,16 +17,6 @@
     "react/jsx-one-expression-per-line": 0,
     "object-curly-newline": 0,
     "react/jsx-props-no-spreading": 0,
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "js": "never",
-        "jsx": "never",
-        "ts": "never",
-        "tsx": "never"
-      }
-    ],
     "implicit-arrow-linebreak": "off",
     "prettier/prettier": "error",
     "no-use-before-define": [
@@ -42,14 +32,6 @@
       }
     ],
     "camelcase": "warn",
-    "jsx-a11y/anchor-is-valid": [
-      "error",
-      {
-        "components": ["Link"],
-        "specialLink": ["hrefLeft", "hrefRight"],
-        "aspects": ["invalidHref", "preferButton"]
-      }
-    ],
     "react/prop-types": "off"
   },
   "settings": {

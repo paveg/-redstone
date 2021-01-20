@@ -1,11 +1,14 @@
 import * as React from 'react';
-import styled from 'styled-components';
-
-const Title = styled.h1`
-  color: red;
-  font-size: 50px;
-`;
+import Typography from '@material-ui/core/Typography';
+import Layout from '../components/Layout';
 
 export default function Home() {
-  return <Title>My page</Title>;
+  return (
+    <>
+      <Layout>
+        <Typography paragraph>main1</Typography>
+        <Typography paragraph>main2</Typography>
+      </Layout>
+    </>
+  );
 }

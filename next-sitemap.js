@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: 'https://redstone.vercel.app',
+  siteUrl: 'https://redstone-online.vercel.app',
   generateRobotsTxt: true,
 };
