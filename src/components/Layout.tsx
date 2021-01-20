@@ -108,7 +108,7 @@ const Layout: React.FC = ({ children }) => {
           <Typography variant="h6" noWrap>
             RedStone ファンサイト
           </Typography>
-          <ButtonGroup variant="primary" className={classes.appBarButtons}>
+          <ButtonGroup color="primary" className={classes.appBarButtons}>
             <Button color="inherit">計算機</Button>
             <Button color="inherit">リンク</Button>
             <Button color="inherit">お問い合わせ</Button>
