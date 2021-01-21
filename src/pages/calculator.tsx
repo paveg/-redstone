@@ -8,9 +8,9 @@ import Select from '@material-ui/core/Select';
 import { useState } from 'react';
 import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
-import Input from '@material-ui/core/Input';
-import InputAdornment from '@material-ui/core/InputAdornment';
 import Divider from '@material-ui/core/Divider';
+import TextField from '@material-ui/core/TextField';
+import InputAdornment from '@material-ui/core/InputAdornment';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -52,6 +52,8 @@ const Calculator: React.FC = () => {
   const [speedOption, setSpeedOption] = useState<number>(0);
 
   const as = calculateAttackSpeed(Number(baseSpeed), Number(speedOption));
+  const asPerSecond = Math.round(framePerSecond / as);
+  const speedOptionError = asPerSecond === Infinity;
 
   return (
     <>
@@ -98,20 +100,27 @@ const Calculator: React.FC = () => {
               <FormHelperText id="speed-option-helper-text">基本攻撃速度（秒）</FormHelperText>
             </FormControl>
             <FormControl className={classes.formControl}>
-              <Input
+              <TextField
+                error={speedOptionError}
+                helperText={
+                  speedOptionError ? '速度オプション値が過大です' : '合計攻撃速度オプション'
+                }
                 id="speed-option"
                 value={speedOption}
                 onChange={(e) => {
-                  setSpeedOption(Number(e.target.value));
+                  let value = Number(e.target.value);
+                  if (isNaN(value)) {
+                    value = 0;
+                  }
+                  setSpeedOption(value);
                 }}
-                endAdornment={<InputAdornment position="end">%</InputAdornment>}
                 aria-describedby="speed-option-helper-text"
-                inputProps={{
+                InputProps={{
                   'aria-label': 'speed-option',
+                  endAdornment: <InputAdornment position="end">%</InputAdornment>,
                 }}
                 className={classes.selectEmpty}
               />
-              <FormHelperText id="speed-option-helper-text">合計速度オプション</FormHelperText>
             </FormControl>
           </Box>
         </Container>
