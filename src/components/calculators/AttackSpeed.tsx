@@ -85,7 +85,7 @@ const AttackSpeed: React.FC = () => {
         <Typography variant="h6">詳細版</Typography>
         <Box fontWeight="fontWeightBold" mt={1}>
           合計速度：{amountSpeedOption}%<br />
-          {as}フレーム - 攻撃回数: {Math.round(framePerSecond / as)}回/秒
+          {as}フレーム - 攻撃回数： {Math.round(framePerSecond / as)}回/秒
         </Box>
 
         <Box component="div" m={2}>

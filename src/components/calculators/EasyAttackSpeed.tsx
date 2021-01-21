@@ -38,7 +38,7 @@ const EasyAttackSpeed: React.FC = () => {
       <Box component="div" mt={2} mb={2} p={2}>
         <Typography variant="h6">簡易版</Typography>
         <Box fontWeight="fontWeightBold" mt={1}>
-          {as}フレーム - 攻撃回数: {Math.round(framePerSecond / as)}回/秒
+          {as}フレーム - 攻撃回数： {Math.round(framePerSecond / as)}回/秒
         </Box>
 
         <Box component="div" m={2}>
