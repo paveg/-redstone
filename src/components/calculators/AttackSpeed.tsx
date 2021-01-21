@@ -117,7 +117,7 @@ const AttackSpeed: React.FC = () => {
               </FormControl>
               <FormControl className={classes.formControl}>
                 <TextField
-                  style={{ width: 120 }}
+                  style={{ width: 160 }}
                   error={speedOptionError}
                   helperText={
                     speedOptionError ? '速度オプション値が過大です' : '攻撃速度オプション'
@@ -146,7 +146,7 @@ const AttackSpeed: React.FC = () => {
           <FormGroup row>
             <FormControl className={classes.formControl}>
               <TextField
-                style={{ width: 120 }}
+                style={{ width: 160 }}
                 size="small"
                 label="補助武器"
                 error={speedOptionError}
@@ -170,7 +170,7 @@ const AttackSpeed: React.FC = () => {
             </FormControl>
             <FormControl className={classes.formControl}>
               <TextField
-                style={{ width: 120 }}
+                style={{ width: 160 }}
                 size="small"
                 label="ネックレス"
                 error={speedOptionError}
@@ -194,7 +194,7 @@ const AttackSpeed: React.FC = () => {
             </FormControl>
             <FormControl className={classes.formControl}>
               <TextField
-                style={{ width: 120 }}
+                style={{ width: 160 }}
                 size="small"
                 label="兜"
                 error={speedOptionError}
@@ -218,7 +218,7 @@ const AttackSpeed: React.FC = () => {
             </FormControl>
             <FormControl className={classes.formControl}>
               <TextField
-                style={{ width: 120 }}
+                style={{ width: 160 }}
                 size="small"
                 label="マント/耳飾り"
                 error={speedOptionError}
@@ -246,7 +246,7 @@ const AttackSpeed: React.FC = () => {
           <FormGroup row>
             <FormControl className={classes.formControl}>
               <TextField
-                style={{ width: 120 }}
+                style={{ width: 160 }}
                 size="small"
                 label="ベルト"
                 error={speedOptionError}
@@ -270,7 +270,7 @@ const AttackSpeed: React.FC = () => {
             </FormControl>
             <FormControl className={classes.formControl}>
               <TextField
-                style={{ width: 120 }}
+                style={{ width: 160 }}
                 size="small"
                 label="グローブ"
                 error={speedOptionError}
@@ -294,7 +294,7 @@ const AttackSpeed: React.FC = () => {
             </FormControl>
             <FormControl className={classes.formControl}>
               <TextField
-                style={{ width: 120 }}
+                style={{ width: 160 }}
                 size="small"
                 label="鎧"
                 error={speedOptionError}
@@ -318,7 +318,7 @@ const AttackSpeed: React.FC = () => {
             </FormControl>
             <FormControl className={classes.formControl}>
               <TextField
-                style={{ width: 120 }}
+                style={{ width: 160 }}
                 size="small"
                 label="シューズ"
                 error={speedOptionError}
@@ -346,7 +346,7 @@ const AttackSpeed: React.FC = () => {
           <FormGroup row>
             <FormControl className={classes.formControl}>
               <TextField
-                style={{ width: 120 }}
+                style={{ width: 160 }}
                 size="small"
                 label="指輪1"
                 error={speedOptionError}
@@ -370,7 +370,7 @@ const AttackSpeed: React.FC = () => {
             </FormControl>
             <FormControl className={classes.formControl}>
               <TextField
-                style={{ width: 120 }}
+                style={{ width: 160 }}
                 size="small"
                 label="指輪2"
                 error={speedOptionError}
@@ -394,7 +394,7 @@ const AttackSpeed: React.FC = () => {
             </FormControl>
             <FormControl className={classes.formControl}>
               <TextField
-                style={{ width: 120 }}
+                style={{ width: 160 }}
                 size="small"
                 label="指輪3"
                 error={speedOptionError}
@@ -418,7 +418,7 @@ const AttackSpeed: React.FC = () => {
             </FormControl>
             <FormControl className={classes.formControl}>
               <TextField
-                style={{ width: 120 }}
+                style={{ width: 160 }}
                 size="small"
                 label="指輪4"
                 error={speedOptionError}
@@ -442,7 +442,7 @@ const AttackSpeed: React.FC = () => {
             </FormControl>
             <FormControl className={classes.formControl}>
               <TextField
-                style={{ width: 120 }}
+                style={{ width: 160 }}
                 size="small"
                 label="指輪5"
                 error={speedOptionError}
@@ -468,7 +468,7 @@ const AttackSpeed: React.FC = () => {
           <FormGroup row>
             <FormControl className={classes.formControl}>
               <TextField
-                style={{ width: 120 }}
+                style={{ width: 160 }}
                 size="small"
                 label="指輪6"
                 error={speedOptionError}
@@ -492,7 +492,7 @@ const AttackSpeed: React.FC = () => {
             </FormControl>
             <FormControl className={classes.formControl}>
               <TextField
-                style={{ width: 120 }}
+                style={{ width: 160 }}
                 size="small"
                 label="指輪7"
                 error={speedOptionError}
@@ -516,7 +516,7 @@ const AttackSpeed: React.FC = () => {
             </FormControl>
             <FormControl className={classes.formControl}>
               <TextField
-                style={{ width: 120 }}
+                style={{ width: 160 }}
                 size="small"
                 label="指輪8"
                 error={speedOptionError}
@@ -540,7 +540,7 @@ const AttackSpeed: React.FC = () => {
             </FormControl>
             <FormControl className={classes.formControl}>
               <TextField
-                style={{ width: 120 }}
+                style={{ width: 160 }}
                 margin="dense"
                 size="small"
                 label="指輪9"
@@ -565,7 +565,7 @@ const AttackSpeed: React.FC = () => {
             </FormControl>
             <FormControl className={classes.formControl}>
               <TextField
-                style={{ width: 120 }}
+                style={{ width: 160 }}
                 size="small"
                 label="指輪10"
                 error={speedOptionError}
