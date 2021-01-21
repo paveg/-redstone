@@ -116,3 +116,6 @@ dist
 
 # export directory
 out/
+
+public/robots.txt
+public/sitemap.xml

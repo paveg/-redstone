@@ -17,6 +17,8 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Button from '@material-ui/core/Button';
 import { Build, FitnessCenter, Language, Security, Warning, Work } from '@material-ui/icons';
 import TransferWithinAStationIcon from '@material-ui/icons/TransferWithinAStation';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const drawerWidth = 240;
 
@@ -24,7 +26,6 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       display: 'flex',
-      flexGrow: 1,
     },
     drawer: {
       [theme.breakpoints.up('sm')]: {
@@ -40,6 +41,9 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     appBarButtons: {
       marginLeft: 'auto',
+    },
+    globalMenuButton: {
+      maxHeight: 36,
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -61,6 +65,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const Layout: React.FC = ({ children }) => {
   const classes = useStyles();
+  const router = useRouter();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -74,18 +79,25 @@ const Layout: React.FC = ({ children }) => {
       <Divider />
       <List>
         {[
-          { linkName: 'アイテム', icon: <Work /> },
-          { linkName: 'スキル', icon: <Build /> },
-          { linkName: 'モンスター', icon: <Warning /> },
-          { linkName: 'ダンジョン', icon: <TransferWithinAStationIcon /> },
-          { linkName: 'クエスト', icon: <FitnessCenter /> },
-          { linkName: 'ギルド', icon: <Security /> },
-          { linkName: '韓国情報', icon: <Language /> },
+          { key: 'item', linkName: 'アイテム', icon: <Work />, href: '/items' },
+          { key: 'skill', linkName: 'スキル', icon: <Build />, href: '/skills' },
+          { key: 'monster', linkName: 'モンスター', icon: <Warning />, href: '/monsters' },
+          {
+            key: 'duengon',
+            linkName: 'ダンジョン',
+            icon: <TransferWithinAStationIcon />,
+            href: '/dungeons',
+          },
+          { key: 'quest', linkName: 'クエスト', icon: <FitnessCenter />, href: '/quests' },
+          { key: 'guild', linkName: 'ギルド', icon: <Security />, href: '/guild' },
+          { key: 'korea', linkName: '韓国情報', icon: <Language />, href: '/korea' },
         ].map((obj) => (
-          <ListItem button key={obj.linkName}>
-            <ListItemIcon>{obj.icon}</ListItemIcon>
-            <ListItemText primary={obj.linkName} />
-          </ListItem>
+          <Link key={obj.key} href={obj.href} passHref>
+            <ListItem button key={obj.key} component="a">
+              <ListItemIcon>{obj.icon}</ListItemIcon>
+              <ListItemText primary={obj.linkName} />
+            </ListItem>
+          </Link>
         ))}
       </List>
     </div>
@@ -109,9 +121,28 @@ const Layout: React.FC = ({ children }) => {
             RedStone ファンサイト
           </Typography>
           <ButtonGroup color="primary" className={classes.appBarButtons}>
-            <Button color="inherit">計算機</Button>
-            <Button color="inherit">リンク</Button>
-            <Button color="inherit">お問い合わせ</Button>
+            {router.pathname !== '/' && (
+              <Link href="/" passHref>
+                <Button color="inherit" className={classes.globalMenuButton}>
+                  ホーム
+                </Button>
+              </Link>
+            )}
+            <Link href="/calculator" passHref>
+              <Button color="inherit" className={classes.globalMenuButton}>
+                計算機
+              </Button>
+            </Link>
+            <Link href="/links" passHref>
+              <Button color="inherit" className={classes.globalMenuButton}>
+                リンク集
+              </Button>
+            </Link>
+            <Link href="/contact" passHref>
+              <Button color="inherit" className={classes.globalMenuButton}>
+                コンタクト
+              </Button>
+            </Link>
           </ButtonGroup>
         </Toolbar>
       </AppBar>
