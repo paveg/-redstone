@@ -6,6 +6,22 @@ export function CalculateAttackSpeed(weaponAttackSpeed: number, speedOption: num
   return Math.floor(a * b);
 }
 
+// 0~600
+export function calculateMinAndMax(weaponAttackSpeed: number, frame: number) {
+  const a = Math.floor(framePerSecond * weaponAttackSpeed);
+  const ok = new Array();
+  for (let i = 0; i < 601; i++) {
+    const b = 100 / (100 + i);
+    if (Math.floor(a * b) === frame) {
+      ok.push(i);
+    }
+  }
+
+  return [Math.min(...ok), Math.max(...ok)];
+}
+
+export const DefaultSpeedOption = 20;
+
 export const baseSpeedOptions = [
   '0.75',
   '0.90',

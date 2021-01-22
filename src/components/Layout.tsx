@@ -83,7 +83,7 @@ const Layout: React.FC = ({ children }) => {
           { key: 'skill', linkName: 'スキル', icon: <Build />, href: '/skills' },
           { key: 'monster', linkName: 'モンスター', icon: <Warning />, href: '/monsters' },
           {
-            key: 'duengon',
+            key: 'dungeon',
             linkName: 'ダンジョン',
             icon: <TransferWithinAStationIcon />,
             href: '/dungeons',
